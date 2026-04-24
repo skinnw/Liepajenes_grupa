@@ -115,6 +115,8 @@ def about_screen():
         bg_img = pygame.image.load('liepaja2.jpg')
         bg_img = pygame.transform.scale(bg_img, (dwidth, dheight))
         screen.blit(bg_img, (0, 0))
+
+        pygame.draw.rect(screen, LGRY, (0, (dheight/6) - 60, 800, 350))
         
         info1 = text('Lai kustinātu karti izmantojiet bultiņu pogas uz savas klaviatūras', BLK, 10, (dheight/6 + 50), 0, 0)
         info2 = text('Lai sāktu uzdevumu uzklikšķiniet uz vienu no sarkanajiem kvadrātiem', BLK, 10, (dheight/6 + 70), 0, 0)
