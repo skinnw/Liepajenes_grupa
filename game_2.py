@@ -240,7 +240,7 @@ def startpup():
                if rulesbtn.xcoord <= rulesbtn.mouse[0] <= rulesbtn.xcoord + rulesbtn.xsize and rulesbtn.ycoord <= rulesbtn.mouse[1] <= rulesbtn.ycoord + rulesbtn.ysize:
                    about_screen()
 
-        pygame.draw.rect(screen, DW98, (dwidth/4 -75, 250 ,570 ,175))
+        pygame.draw.rect(screen, LGRY, (dwidth/4 -75, 250 ,570 ,175))
         starttxt = text("Vai jūs vēlaties sākt ekskursiju?", BLK, dwidth/4 -60, 260 ,0 ,0)
         starttxt.showltext()
 
