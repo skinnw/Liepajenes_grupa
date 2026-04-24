@@ -182,6 +182,7 @@ def title_screen():
         mouse = pygame.mouse.get_pos()
 
         title = text('Mācību Ekskursija Liepājā', BLK, (dwidth/2), (dheight/6), 0, 0)
+        pygame.draw.rect(screen, LGRY, (0, (dheight/6) - 60, 800, 150))
         title.titletext()
         
         
