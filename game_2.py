@@ -278,7 +278,7 @@ def exitpup():
                 if nobtn.xcoord <= nobtn.mouse[0] <= nobtn.xcoord + nobtn.xsize and nobtn.ycoord <= nobtn.mouse[1] <= nobtn.ycoord + nobtn.ysize:
                    exitpopup = False
 
-        pygame.draw.rect(screen, DW98, (dwidth/4 -40, 250 ,490 ,175))
+        pygame.draw.rect(screen, LGRY, (dwidth/4 -40, 250 ,490 ,175))
         exittxt = text("Vai jūs vēlaties iziet?", BLK, dwidth/4 +10, 260 ,0 ,0)
         exittxt.showltext()
 
@@ -313,7 +313,7 @@ def results_screen():
         # Peles koordinātes
         mouse = pygame.mouse.get_pos()
         
-        pygame.draw.rect(screen, DW98, (dwidth/4 -40, 180 ,490 ,290))
+        pygame.draw.rect(screen, LGRY, (dwidth/4 -40, 180 ,490 ,290))
         starttxt = text("Rezultāti", BLK, dwidth/2 - 80, 190 ,0 ,0)
         res1 = text(line1, BLK, dwidth/2 - 80, 300 ,0 ,0)
         back = buttons(dwidth/2 +50, 400 ,180 ,50, LGRY, GRY,0)
@@ -357,7 +357,7 @@ def ending():
                 if exitbtn.xcoord <= exitbtn.mouse[0] <= exitbtn.xcoord + exitbtn.xsize and exitbtn.ycoord <= exitbtn.mouse[1] <= exitbtn.ycoord + exitbtn.ysize:
                     exitpup()
                        
-        screen.fill(W98)
+        screen.fill(LGRY)
         
         title = text('Paldies ka spēlējāt!', BLK, (dwidth/2), (dheight/6), 0, 0)
         title.titletext()
@@ -496,7 +496,7 @@ def ingame_map():
         if y <= -1200:
                 y = -1200  
         
-        screen.fill(W98)
+        screen.fill(LGRY)
         screen.blit(map, (x, y))
 
         #Kartes pogas
@@ -525,7 +525,7 @@ def ingame_map():
         # UI elementi (apakšējā rinda kartes ekrānā)
 
         # Izveido apakšējo rindu zem kartes
-        pygame.draw.rect(screen, DW98, (0, 490 ,800 ,110))
+        pygame.draw.rect(screen, LGRY, (0, 490 ,800 ,110))
 
         aboutbtn = buttons(355, 550 ,205 ,45, LGRY, GRY,0)
         aboutbtntext = text("Noteikumi", BLK, aboutbtn.xcoord, aboutbtn.ycoord, aboutbtn.xsize, aboutbtn.ysize)
@@ -602,7 +602,7 @@ class levels:
             mouse = pygame.mouse.get_pos()
         
 
-            pygame.draw.rect(screen, DW98, (dwidth/4 -75, 50 ,570 ,375))
+            pygame.draw.rect(screen, LGRY, (dwidth/4 -75, 50 ,570 ,375))
             lvlname = text(self.name, BLK, dwidth/4 -60, 60 ,0 ,0)
             lvltxt1 = text(self.text1, BLK, dwidth/4 -60, 100 ,0 ,0)
             lvltxt2 = text(self.text2, BLK, dwidth/4 -60, 125 ,0 ,0)
@@ -696,7 +696,7 @@ class levels:
                             self.penalty()
     
 
-            screen.fill(W98)
+            screen.fill(LGRY)
             
             question = text(question.strip(), BLK, (dwidth/6), (dheight/6), 0, 0)
             question.showltext()
