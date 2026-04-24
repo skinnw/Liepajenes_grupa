@@ -112,7 +112,10 @@ def about_screen():
                 if start.xcoord <= start.mouse[0] <= start.xcoord + start.xsize and start.ycoord <= start.mouse[1] <= start.ycoord + start.ysize:
                     ingame_map()
         
-        screen.fill(W98)
+        bg_img = pygame.image.load('liepaja2.jpg')
+        bg_img = pygame.transform.scale(bg_img, (dwidth, dheight))
+        screen.blit(bg_img, (0, 0))
+        
         info1 = text('Lai kustinātu karti izmantojiet bultiņu pogas uz savas klaviatūras', BLK, 10, (dheight/6 + 50), 0, 0)
         info2 = text('Lai sāktu uzdevumu uzklikšķiniet uz vienu no sarkanajiem kvadrātiem', BLK, 10, (dheight/6 + 70), 0, 0)
         info3 = text('Par katru pareizo atbildi tiek doti 5 punkti', BLK, 10, (dheight/6 + 90), 0, 0)
