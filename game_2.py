@@ -174,7 +174,9 @@ def title_screen():
                 if startbtn.xcoord <= mouse[0] <= startbtn.xcoord + startbtn.xsize and startbtn.ycoord <= mouse[1] <= startbtn.ycoord + startbtn.ysize:
                     startpup()
                    
-        screen.fill(W98)
+            bg_img = pygame.image.load('liepaja.jpg')
+            bg_img = pygame.transform.scale(bg_img, (dwidth, dheight))
+            screen.blit(bg_img, (0, 0))
         
         # Peles koordinātes
         mouse = pygame.mouse.get_pos()
